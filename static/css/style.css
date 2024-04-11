@@ -1,0 +1,208 @@
+body {
+  font-family: "Montserrat", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: black;
+}
+
+nav.menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px 0;
+  background-color: #333;
+}
+
+.menu>ol {
+  display: flex;
+}
+
+@media only screen and (max-width: 800px) {
+  nav.menu {
+    padding: 10px 20px;
+  }
+
+  .menu>ol {
+    display: block;
+  }
+}
+
+.menu>ol>.menu-item {
+  display: inline-block;
+  position: relative;
+}
+
+@media only screen and (max-width: 800px) {
+  .menu>ol>.menu-item {
+    display: block;
+  }
+}
+
+.menu>ol>.menu-item>a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin: 0 15px;
+  display: block;
+}
+
+@media only screen and (max-width: 800px) {
+  .menu>ol>.menu-item>a {
+    margin: 10px 0;
+    font-size: 18px;
+  }
+}
+
+.menu>ol>.menu-item .sub-menu {
+  padding: 28px 25px 0;
+  position: absolute;
+  left: 0;
+  opacity: 0;
+}
+
+@media only screen and (max-width: 800px) {
+  .menu>ol>.menu-item .sub-menu {
+    left: 100%;
+    top: -32px;
+  }
+}
+
+.menu>ol>.menu-item:hover .sub-menu {
+  opacity: 1;
+}
+
+.menu>ol>.menu-item .sub-menu li {
+  opacity: 0;
+}
+
+.menu>ol>.menu-item .sub-menu li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1vw;
+  font-weight: 400;
+  letter-spacing: 1px;
+  margin: 12px 0;
+  display: block;
+  white-space: nowrap;
+  text-transform: uppercase;
+  transition: color 0.3s cubic-bezier(0.13, 1.07, 0.84, 1);
+}
+
+@media only screen and (max-width: 1080px) {
+  .menu>ol>.menu-item .sub-menu li a {
+    font-size: 13px;
+  }
+}
+
+.menu>ol>.menu-item .sub-menu li a:hover {
+  color: #f34ea4;
+}
+
+.menu .menu-shape {
+  position: absolute;
+  left: -62px;
+  top: -55px;
+  z-index: -1;
+}
+
+@media only screen and (max-width: 800px) {
+  .menu .menu-shape {
+    left: -35px;
+  }
+}
+
+.menu .menu-shape svg {
+  position: relative;
+  display: block;
+  width: 10vw;
+  height: 10vh;
+  min-height: 150px;
+  margin: 0 auto;
+}
+
+@media only screen and (max-width: 800px) {
+  .menu .menu-shape svg {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+@keyframes subMenuAnimation {
+  0% {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+.content {
+  color: #fff;
+  padding: 20px;
+  margin-top: 50px;
+  /* Déplacement du contenu vers le bas de 50px */
+}
+
+/* Ajout des styles pour l'image de profil */
+.profile-img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+
+/* Ajout des styles pour l'encadrement */
+.content {
+  margin: 20px;
+  /* Ajoute de la marge autour du contenu */
+  border: 2px solid #ccc;
+  /* Bordure de 2px solide de couleur grise */
+  background-color: #444;
+  /* Fond gris pour l'encadrement */
+  border-radius: 10px;
+  /* Coins arrondis */
+}
+
+section {
+  margin-bottom: 40px;
+}
+
+h2 {
+  font-size: 24px;
+  color: #fff;
+  text-align: center;
+}
+
+p {
+  font-size: 18px;
+  color: #fff;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+
+  li {
+    font-size: 16px;
+    color: #fff;
+  }
+}
+
+.profile-img {
+  width: 200px;
+  /* Largeur de l'image */
+  height: 200px;
+  /* Hauteur de l'image */
+  border-radius: 50%;
+  /* Coins arrondis pour créer un cercle */
+  display: block;
+  /* Permet de centrer l'image */
+  margin: 0 auto 20px;
+  /* Centre l'image horizontalement et ajoute une marge en bas */
+}
